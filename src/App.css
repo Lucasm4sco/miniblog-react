@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #F6FCFF;
+}
+
+.container {
+    min-height: 60vh;
+    margin-bottom: 5em;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+a, nav button {
+    text-decoration: none;
+    border: none;
+    color: #000;
+    transition: .4s;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+a:hover, nav button:hover {
+    color: #bbb;
+}
