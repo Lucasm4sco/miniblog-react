@@ -34,6 +34,7 @@ input, textarea {
     border-bottom: 1px solid #ccc;
     padding: .8em 0;
     background-color: transparent;
+    margin-bottom: 20px;
 }
 
 .btn {

@@ -1,0 +1,34 @@
+.about {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about h2 {
+    margin: 40px 0;
+}
+
+.about p {
+    color: #AAA;
+    margin-bottom: 2em;
+}
+
+.about a {
+    display: block;
+    padding: 10px 15px;
+}
+
+.btn {
+    background-color: #1a8918;
+    color: #FFF;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 120px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    margin: 20px 0;
+}
