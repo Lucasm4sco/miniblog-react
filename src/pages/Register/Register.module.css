@@ -1,9 +1,15 @@
 .register {
     text-align: center;
+    height: 100%;
+}
+
+.register h1 {
+    margin: 40px 0;
 }
 
 .register p {
     color: #aaa;
+    margin-bottom: 20px;
 }
 
 form {
@@ -24,6 +30,7 @@ label span {
 }
 
 input, textarea {
+    border: none;
     border-bottom: 1px solid #ccc;
     padding: .8em 0;
     background-color: transparent;
@@ -40,6 +47,7 @@ input, textarea {
     border: none;
     padding: 10px 15px;
     font-size: 1em;
+    margin: 20px 0;
 }
 
 .btn.btn-dark{
@@ -68,14 +76,20 @@ input, textarea {
     background-color: #DC3545;
 }
 
-button:disabled {
+button:disabled, button:disabled:hover {
     background-color: #AAA;
 }
 
-.container .error {
+.error {
     color: #721c24;
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
     padding: 5px;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 500px) {
+    form {
+        max-width: 80%;
+    }
 }
