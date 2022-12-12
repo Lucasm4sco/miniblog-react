@@ -18,13 +18,13 @@ export const useAuthentication = () => {
 
     const auth = getAuth();
 
-    function checlIfIsCancellled(){
+    function checkIfIsCancellled(){
         if(cancelled)
             return
     }
     
     const createUser = async(data) => {
-        checlIfIsCancellled();
+        checkIfIsCancellled();
         setLoading(true);
         setError(null);
 
@@ -56,9 +56,14 @@ export const useAuthentication = () => {
         setLoading(false);
     }
 
+    const logOut = () => {
+        checkIfIsCancellled();
+        signOut(auth);
+    }
+
     useEffect(() => {
         return () => setCancelled(true);
     }, []);
 
-    return { auth, createUser, error, loading };
+    return { auth, createUser, error, loading, logOut };
 }

@@ -19,6 +19,7 @@ input:focus, textarea:focus {
 }
 
 a, nav button {
+    background-color: transparent;
     text-decoration: none;
     border: none;
     color: #000;
