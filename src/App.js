@@ -15,6 +15,7 @@ import CreatePost from './pages/CreatePost/CreatePost';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Post from './pages/Post/Post';
+import EditPost from './pages/EditPost/EditPost';
 
 
 const App = () => {
@@ -56,6 +57,10 @@ const App = () => {
               <Route 
                 path='/posts/create' 
                 element={!user? <Navigate to='/login' /> : <CreatePost />} 
+              />
+              <Route 
+                path='/posts/edit/:id' 
+                element={!user? <Navigate to='/login' /> : <EditPost />} 
               />
               <Route 
                 path='/dashboard' 
