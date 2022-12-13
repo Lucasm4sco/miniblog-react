@@ -49,11 +49,46 @@ export const useAuthentication = () => {
             if(error.message.includes('Password'))
                 systemErrorMessage = 'A senha precisa conter pelo menos 6 caracteres.';
 
-            setError(systemErrorMessage);
-            
-        }
+            if(error.message.includes('email-already-in-use'))
+                systemErrorMessage = 'O e-mail utilizado já está cadastrado. Faça login ou utilize outro e-mail.';
 
-        setLoading(false);
+            if(error.message.includes('invalid-email'))
+                systemErrorMessage = 'Por favor, digite um e-mail válido';
+
+            if(!systemErrorMessage)
+                systemErrorMessage = 'Ocorreu um erro inesperado, por favor tente novamente mais tarde!'
+
+            setError(systemErrorMessage);
+            setLoading(false);
+        }
+    }
+
+    const login = async(data) => {
+        checkIfIsCancellled();
+        setLoading(true);
+        setError(null);
+
+        try {
+            await signInWithEmailAndPassword(
+                auth,
+                data.email,
+                data.password
+            )
+
+            setLoading(false);
+        } catch (error) {
+            console.log(error.message);
+            let systemErrorMessage;
+
+            if(error.message.includes('user-not-found') || error.message.includes('wrong-password'))
+                systemErrorMessage = 'Usuário ou senha incorreta.';
+
+            if(!systemErrorMessage)
+                systemErrorMessage = 'Ocorreu um erro inesperado, por favor tente novamente mais tarde!'
+            
+            setError(systemErrorMessage);
+            setLoading(false);
+        }
     }
 
     const logOut = () => {
@@ -65,5 +100,5 @@ export const useAuthentication = () => {
         return () => setCancelled(true);
     }, []);
 
-    return { auth, createUser, error, loading, logOut };
+    return { auth, createUser, error, loading, logOut, login };
 }

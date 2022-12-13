@@ -67,23 +67,25 @@ const Register = () => {
             <label>
                 <span>Senha:</span>
                 <input 
-                    type="new-password" 
+                    type="password" 
                     name="password" 
                     required
                     placeholder='Crie um senha'
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    autoComplete='on'
                     />
             </label>
             <label>
                 <span>Confirmar senha:</span>
                 <input 
-                    type="new-password" 
+                    type="password" 
                     name="confirmPassword" 
                     required
                     placeholder='Confirme sua senha'
                     value={confirmPassowrd}
                     onChange={(e) => setConfirmPassword(e.target.value)}
+                    autoComplete='on'
                     />
             </label>
             <button className={styles.btn} disabled={loading}>

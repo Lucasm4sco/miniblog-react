@@ -24,6 +24,10 @@
     padding:  .4em .6em;
 }
 
+.links_list button {
+    padding:  0 .6em;
+}
+
 .active {
     background-color:  #000;
     color: aliceblue;

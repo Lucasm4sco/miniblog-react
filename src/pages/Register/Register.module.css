@@ -81,7 +81,7 @@ button:disabled, button:disabled:hover {
     background-color: #AAA;
 }
 
-.error {
+.register .error {
     color: #721c24;
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
