@@ -55,10 +55,10 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     />
             </label>
-            <button className={styles.btn} disabled={loading}>
+            <button className='btn' disabled={loading}>
                 {loading? 'Aguarde...' : 'Entrar'}
             </button>
-            {error && <p className={styles.error}>{error}</p>}
+            {error && <p className='error'>{error}</p>}
         </form>
     </div>
   )

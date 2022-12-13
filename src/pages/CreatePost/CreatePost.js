@@ -102,10 +102,10 @@ const CreatePost = () => {
             onChange={(e) => setTags(e.target.value)}
           />
         </label>
-        <button className={styles.btn} disabled={response.loading}>
+        <button className='btn' disabled={response.loading}>
           {response.loading? 'Aguarde...' : 'Postar'}
         </button>
-        {formError && <p className={styles.error}>{formError}</p>}
+        {formError && <p className='error'>{formError}</p>}
       </form>
       
     </div>
