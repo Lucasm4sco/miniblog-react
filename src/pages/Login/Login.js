@@ -47,7 +47,7 @@ const Login = () => {
             <label>
                 <span>Senha:</span>
                 <input 
-                    type="new-password" 
+                    type="password" 
                     name="password" 
                     required
                     placeholder='Digite sua senha'

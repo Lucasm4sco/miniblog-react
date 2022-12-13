@@ -7,12 +7,15 @@ import './App.css';
 
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
+import Search from './pages/Search/Search';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Dashboard from './pages/Dashboard/Dashboard';
 import CreatePost from './pages/CreatePost/CreatePost';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import Post from './pages/Post/Post';
+
 
 const App = () => {
 
@@ -38,14 +41,10 @@ const App = () => {
           <Navbar />
           <div className='container'>
             <Routes>
-              <Route 
-                path='/' 
-                element={<Home />} 
-              />
-              <Route 
-                path='/about' 
-                element={<About />} 
-              />
+              <Route path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/search' element={<Search />} />
+              <Route path='/posts/:id' element={<Post />} />
               <Route 
                 path='/login' 
                 element={user ? <Navigate to='/'/> : <Login />} 
