@@ -3,7 +3,7 @@
     height: 100%;
 }
 
-.login p {
+.login > p {
     color: #aaa;
     margin-bottom: 30px;
 }

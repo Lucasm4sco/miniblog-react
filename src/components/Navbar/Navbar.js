@@ -1,9 +1,24 @@
+import { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import { useAuthentication } from "../../hooks/useAuthentication";
 import { useAuthValue } from "../../context/AuthContext";
 import styles from './Navbar.module.css';
+import './hamburguer-nav.css';
 
 const Navbar = () => {
+    const [showNavLinks, setShowNavLinks] = useState(false);
+    const [releaseAnimation, setReleaseAnimation] = useState(false);
+
+    const handleHamburguer = () => {
+        setShowNavLinks(!showNavLinks);
+        setReleaseAnimation(true);
+    }
+
+    const changeAnimation = () => {
+        if(!releaseAnimation) return '';
+        return showNavLinks ? 'animated' : 'return-animated'
+    }
+
     const {user} = useAuthValue();
     const {logOut} = useAuthentication();
 
@@ -12,7 +27,15 @@ const Navbar = () => {
         <NavLink to='/' className={styles.brand}>
             Mini <span>Blog</span>
         </NavLink>
-        <ul className={styles.links_list}>
+        <button 
+            className="hamburger-nav" 
+            onClick={handleHamburguer}
+        >
+            <div className={"line-1 " + changeAnimation()}></div>
+            <div className={"line-2 " + changeAnimation()}></div>
+            <div className={"line-3 " + changeAnimation()}></div>
+        </button>
+        <ul className={styles.links_list + ' ' + changeAnimation()} id='link_list'>
             <li>
                 <NavLink 
                 to='/' 

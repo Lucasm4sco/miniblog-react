@@ -9,6 +9,11 @@ body {
     background-color: #F6FCFF;
 }
 
+html, body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 .container {
     min-height: 60vh;
     margin-bottom: 5em;

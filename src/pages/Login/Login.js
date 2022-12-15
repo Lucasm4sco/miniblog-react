@@ -52,6 +52,7 @@ const Login = () => {
                     required
                     placeholder='Digite sua senha'
                     value={password}
+                    autoComplete='on'
                     onChange={(e) => setPassword(e.target.value)}
                     />
             </label>

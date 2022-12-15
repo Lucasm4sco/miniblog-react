@@ -21,6 +21,14 @@
     margin: 1em;
 }
 
+.post_container > p {
+    margin: 1em auto;
+    max-width: 800px;
+    text-align: start;
+    white-space: pre-line;
+    text-indent: 1em;
+}
+
 .tags span {
     font-weight: bold;
 }
