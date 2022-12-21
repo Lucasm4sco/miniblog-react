@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Mini-blog
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sobre o projeto
 
-## Available Scripts
+Uma aplicação que funciona de maneira semelhante a um blog, onde o usuário pode criar uma conta, fazer login, postar algum artigo e editar esse mesmo artigo. O projeto foi realizado visando o estudo em React e aprendendo sobre o firebase.
 
-In the project directory, you can run:
+## Páginas da aplicação
 
-### `npm start`
+- **Página inicial**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Página inicial da aplicação, onde será listado os posts que o usuário poderá ler e a primeira tela ao entrar ao site](./assets/pagina-inicial.jpeg)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Página de login**
 
-### `npm test`
+![Página em que o usuário poderá realizar o login, caso já tenha criado uma conta](./assets/pagina-login.jpeg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Página de cadastro**
 
-### `npm run build`
+![Página em que o usuário poderá criar um conta para poder criar posts na aplicação, após criar sua conta a aplicação já entenderá e irá fazer o login](./assets/pagina-criar-post.jpeg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Página sobre**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![A página sobre contém uma mini descrição sobre o projeto e um botão que encaminha ao usuário fazer login ou criar um post caso já esteja logado](./assets/pagina-sobre.jpeg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Página Criar posts**
 
-### `npm run eject`
+![Destinada a criação de posts a página contém um formulário com informações que seram usadas ao postar](./assets/pagina-criar-post.jpeg)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Página Dashboard**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![A página dashboard será onde aparecerá os posts já criados pela pessoa logada e ações que lhe seram permitidas, como Ver o post, editar o post, e exclui-lo](./assets/pagina-dashboard.jpeg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Página Editar Post**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Após clicar em editar um post, o usuário será enviado para esta página da aplicação onde poderá editar as informações do post através do mesmo formulário de criação](./assets/pagina-editar-post.jpeg)
 
-## Learn More
+- **Página Search**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Após ser feito alguma pesquisa através das tags desejadas, a aplicação filtra os posts que possuem estas tags e mostram na tela](./assets/pagina-pesquisa.jpeg)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Como testar
 
-### Code Splitting
+- Crie uma conta e um banco de dadosno site do firebase, após isso você poderá configurar o arquivo ```.env``` com as seguintes chaves:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```env
+REACT_APP_API_KEY=
+REACT_APP_AUTH_DOMAIN=
+REACT_APP_PROJECT_ID=
+REACT_APP_STORAGE_BUCKET=
+REACT_APP_MESSAGING_SENDER_ID=
+REACT_APP_APP_ID=
+```
 
-### Analyzing the Bundle Size
+- Utilize o comando ```npm install``` para instalar as depêndencias;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Então utilize o comando ```npm start``` para iniciar a aplicação e poder abrir o link gerado no navegador.
